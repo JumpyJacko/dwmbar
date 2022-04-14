@@ -6,6 +6,9 @@ dwmbar is a very simple status bar written for dwm.
 
 **This project is no longer actively maintained. You will likely not receive support from the devs if something's not right. If you are somebody who is interested in taking over this project, please contact me (thytom) and we can discuss adding you as a contributor. You are also more than welcome to fork the project if you wish to make improvements on your own.**
 
+# Why fork?
+Because `archupdates` doesn't work with my setup and I have stuff I want to add/change to this and still be able to use with my install script.
+
 # Installation
 
 ## Prerequisites
