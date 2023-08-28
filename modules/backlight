@@ -7,7 +7,7 @@ PREFIX='ﯧ'
 
 get_backlight()
 {
-    echo "$PREFIX $(light | sed 's/\..*//g')%"
+    echo "$PREFIX $(xrandr --verbose --current | grep "Brightness" | grep -oE '[^ ]+$' | grep -oE '..$')%"
 }
 
 get_backlight
