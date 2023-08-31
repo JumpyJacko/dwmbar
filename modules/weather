@@ -6,7 +6,12 @@
 
 get_weather()
 {
-	curl -s 'wttr.in/?format=%C+%t\n'
+	RESPONSE="$(curl --max-time 5.0 -s 'wttr.in/?format=%C+%t\n')"
+  if ![[ ${#RESPONSE} -lt 40 ]] then
+  	RESPONSE=" N/A "
+	fi
+
+	echo "$RESPONSE"
 }
 
 
