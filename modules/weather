@@ -7,7 +7,7 @@
 get_weather()
 {
 	RESPONSE="$(curl --max-time 5.0 -s 'wttr.in/?format=%C+%t\n')"
-  if ![[ ${#RESPONSE} -lt 40 ]] then
+  if [[ $(echo -n "$RESPONSE" | wc -c ) -gt 25 ]]; then
   	RESPONSE=" N/A "
 	fi
 
@@ -15,6 +15,6 @@ get_weather()
 }
 
 
-if [ $(( 10#$(date '+%S') % 30 )) -eq 0 ]; then
+if [ $(( 10#$(date '+%S') % 59 )) -eq 0 ]; then
 	get_weather
 fi
