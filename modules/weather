@@ -15,6 +15,6 @@ get_weather()
 }
 
 
-if [ $(( 10#$(date '+%S') % 59 )) -eq 0 ]; then
+if [ $(( 10#$(date '+%M') % 15 )) -eq 0 ]; then
 	get_weather
 fi
