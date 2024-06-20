@@ -2,7 +2,7 @@
 
 # Prints out the kernel version
 
-PREFIX=' '
+PREFIX=''
 
 get_kernel()
 {
